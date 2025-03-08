@@ -10,7 +10,7 @@ export default function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
-      <Redirect to={"/blog"} />
+      <Redirect to={`${siteConfig.baseUrl}blog`} />
     </Layout>
   );
 }
