@@ -9,6 +9,8 @@ tags: [raspberrypi, windows10]
 
 In the [previous part](/blog/setting-raspberry-pi-software-p1) we were all done with writing the OS to tour SD Card. Now its time to attach this SD Card to our Raspberry Pi 3 board.
 
+<!-- truncate -->
+
 So connect the SD Card to the Board and follow these step to setup your board.
 
 1. Open the control panel   
