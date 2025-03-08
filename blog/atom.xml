@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-site.example.com/blog</id>
+    <title>Sahil Phondekar Blog</title>
+    <updated>2020-08-09T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-site.example.com/blog"/>
+    <subtitle>Sahil Phondekar Blog</subtitle>
+    <icon>https://your-docusaurus-site.example.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Dual Boot Ubuntu Alongside Windows 10 - Part 2]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p2</id>
+        <link href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p2"/>
+        <updated>2020-08-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have completed the following steps in the previous blog Dual Boot Ubuntu Alongside Windows 10 - Part 1]]></summary>
+        <content type="html"><![CDATA[<p>We have completed the following steps in the previous blog <a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1">Dual Boot Ubuntu Alongside Windows 10 - Part 1</a></p>
+<p><em><strong>Step 1 : Create a partition for Ubuntu OS</strong></em><br>
+<em><strong>Step 2 : Creating an Installer Media</strong></em></p>
+<p>Now we will proceed with the installation of Ubuntu in the next step...</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-3--installing-ubuntu-with-dual-boot-on-windows-10">Step 3 : Installing Ubuntu with Dual boot on Windows 10<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p2#step-3--installing-ubuntu-with-dual-boot-on-windows-10" class="hash-link" aria-label="Direct link to Step 3 : Installing Ubuntu with Dual boot on Windows 10" title="Direct link to Step 3 : Installing Ubuntu with Dual boot on Windows 10">​</a></h4>
+<p>In the last steps we have created an installer media using the USB drive. We will use the installer media now to install Ubuntu.</p>
+<p>Connect the USB drive / pen-drive to the PC and power ON the PC (Note: If you are already logged in to Windows simply connect the pen-drive to PC and restart your PC)</p>
+<p>While the PC is starting press F12 continuously to open the boot menu (The keys to access boot menu varies according to brand, F12 is boot menu key for Dell and Lenovo, F10 for HP)</p>
+<p><img decoding="async" loading="lazy" alt="Boot Menu" src="https://your-docusaurus-site.example.com/assets/images/boot-menu-028973ff705b169a26efd100b32b87e3.png" width="399" height="194" class="img_ev3q"></p>
+<p>Once on the boot menu screen you can select your USB device from the list of available boot devices.</p>
+<p>After selecting your USB device press Enter to boot into Ubuntu. If a grub screen as shown in following figure appears select Try Ubuntu without installing</p>
+<p><img decoding="async" loading="lazy" alt="Try Ubuntu" src="https://your-docusaurus-site.example.com/assets/images/try-ubuntu-a04d2972610bb8e89a9bc69dd9721162.png" width="640" height="480" class="img_ev3q"></p>
+<p>It will take some time to boot into the OS after which the following screen will appear. You can click on Try Ubuntu to get the feel of the OS before actually installing it or you can directly proceed to install the OS by clicking Install Ubuntu.</p>
+<p><img decoding="async" loading="lazy" alt="Install Ubuntu" src="https://your-docusaurus-site.example.com/assets/images/install-ubuntu-14e02a7dd5ef815c360e6765339ff774.png" width="640" height="360" class="img_ev3q"></p>
+<p>After clicking on Install Ubuntu the following screen will open. Select your keyboard layout and click on Continue.</p>
+<p><img decoding="async" loading="lazy" alt="Keyboard Layout" src="https://your-docusaurus-site.example.com/assets/images/keyboard-layout-043d0edd7273f2b68ac61a4d68cc5c02.png" width="640" height="360" class="img_ev3q"></p>
+<p>In the next screen you will need to select the apps to install while installing Ubuntu.</p>
+<p>For Normal Installation it will install all softwares for web browsers, utilities, office softwares, games and media players.</p>
+<p>Select Minimal Installation if you do not need more software or are short in space. ( Note: You can install these softwares later if  required )</p>
+<p>Here we will proceed with Normal Installation</p>
+<p>Un-check Other Options i.e Download updates while installing Ubuntu and Install third-party software and click on Continue</p>
+<p><img decoding="async" loading="lazy" alt="Install" src="https://your-docusaurus-site.example.com/assets/images/install-2eaa0a5d4953141a717c324274ee5ffc.png" width="640" height="360" class="img_ev3q"></p>
+<p>Next you need to select the Installation type</p>
+<p>Select Something else from the available options and click Continue. This gives us the freedom to make our own partitions and allocate space as per our needs.</p>
+<p><img decoding="async" loading="lazy" alt="Installation Type" src="https://your-docusaurus-site.example.com/assets/images/installation-type-744e9a02d941e9d54a21ff76513dccfb.png" width="640" height="360" class="img_ev3q"></p>
+<p>The next window we need to create partitions for our installation.</p>
+<p>From the available partitions select the free space partition. Its nearly 50 GB of free space.</p>
+<p>We will be creating two partitions from the available 50 GB space:</p>
+<ul>
+<li>The root (/) partition (same as C: Drive in windows)</li>
+<li>The swap partition (Its like an extra RAM, its a partition that works as a RAM when the original RAM memory is fully utilised. The recommended swap memory size ~ 2 * RAM size)</li>
+</ul>
+<p>You can also add the Home partition (as D: and E: drives in Windows) to properly organise your system files. But I will skip that here.</p>
+<p><img decoding="async" loading="lazy" alt="Installation Type 1" src="https://your-docusaurus-site.example.com/assets/images/installation-type-1-581e74be71ac790d0909aca88e41e307.png" width="640" height="360" class="img_ev3q"></p>
+<p>Once you have selected the free space partition click on the plus ( + ) icon on the window. This will open a Create Partition window.</p>
+<p>We will first create the root partition.</p>
+<p>Enter the size of the partition as 40000 MB, select the type as Logical and location as Beginning of this space.  Use as : Ext4 journaling file system</p>
+<p>Select the mount point as (/) i.e root and click on OK. This will create the root partition.</p>
+<p><img decoding="async" loading="lazy" alt="Create Partition" src="https://your-docusaurus-site.example.com/assets/images/create-partition-92ceba54339f7d2d11a2eb2772f30137.png" width="640" height="360" class="img_ev3q"></p>
+<p>Next we will add the swap partition.</p>
+<p>Select the available free space partition and click on plus ( + ) icon. This will again open the Create Partition window.</p>
+<p>Enter the size of the partition as 8000 MB, select the type as Logical and location as Beginning of this space.  Select Use as : swap area and click OK.</p>
+<p><img decoding="async" loading="lazy" alt="Create Partition" src="https://your-docusaurus-site.example.com/assets/images/create-partition-2-2ba7845902530e18141013ee1b973ffb.png" width="640" height="360" class="img_ev3q"></p>
+<p>Hence we are done with creating the root and swap partition. Now you can click Install Now</p>
+<p><img decoding="async" loading="lazy" alt="Something else" src="https://your-docusaurus-site.example.com/assets/images/something-else-f9a6c53110101d90fe5f6f945434a835.png" width="640" height="360" class="img_ev3q"></p>
+<p>A confirmation window will pop up. Click on Continue to proceed with the installation.</p>
+<p><img decoding="async" loading="lazy" alt="Something else" src="https://your-docusaurus-site.example.com/assets/images/something-else-2-4838456b85853a79556d3eead7d40fa3.png" width="640" height="360" class="img_ev3q"></p>
+<p>Before starting the installation you need to enter some details..</p>
+<p>Select your time zone and click Continue</p>
+<p><img decoding="async" loading="lazy" alt="Time Zone" src="https://your-docusaurus-site.example.com/assets/images/time-zone-cf09fc3804b93817a514863da36785f8.png" width="640" height="360" class="img_ev3q"></p>
+<p>Enter your login details and click on Continue</p>
+<p><img decoding="async" loading="lazy" alt="Login Details" src="https://your-docusaurus-site.example.com/assets/images/login-details-a9f97a5ab7c51cbbe8f6385874cd4099.png" width="640" height="360" class="img_ev3q"></p>
+<p>Now your installation will begin. This will take some time.</p>
+<p><img decoding="async" loading="lazy" alt="Installation" src="https://your-docusaurus-site.example.com/assets/images/installation-53e0ff436448b8ce85573497be4d27c7.png" width="640" height="360" class="img_ev3q"></p>
+<p>Once the installation is complete you can restart the computer by clicking Restart Now</p>
+<p><img decoding="async" loading="lazy" alt="Restart" src="https://your-docusaurus-site.example.com/assets/images/restart-950d91a737a6b2f1cd9d45fa5f0d8ef4.png" width="640" height="360" class="img_ev3q"></p>
+<p>After restarting your computer you will now see a grub screen from where you can choose between the two OS. Select Ubuntu to boot into Ubuntu OS and select Windows Boot Manager to boot into Windows 10.</p>
+<p><img decoding="async" loading="lazy" alt="Grub Screen" src="https://your-docusaurus-site.example.com/assets/images/grub-screen-2020418974d5f625418858bbab8243d2.png" width="392" height="150" class="img_ev3q"></p>
+<p>This completes the installation of Ubuntu alongside Windows 10.😎</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Linux" term="Linux"/>
+        <category label="Ubuntu" term="Ubuntu"/>
+        <category label="Windows 10" term="Windows 10"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dual Boot Ubuntu Alongside Windows 10 - Part 1]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1</id>
+        <link href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1"/>
+        <updated>2020-08-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dual Boot or VMware?]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dual-boot-or-vmware">Dual Boot or VMware?<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1#dual-boot-or-vmware" class="hash-link" aria-label="Direct link to Dual Boot or VMware?" title="Direct link to Dual Boot or VMware?">​</a></h3>
+<p>Depending on the work or requirements of a particular assigned task, one may require a specific operating system or a specific version of an operating system (eg. Linux or Windows 7 or Windows 10).</p>
+<p>To install multiple copies of different OS on a machine there are two ways: Dual Boot or use a VMware software.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-use-dual-boot">Why use Dual Boot?<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1#why-use-dual-boot" class="hash-link" aria-label="Direct link to Why use Dual Boot?" title="Direct link to Why use Dual Boot?">​</a></h3>
+<p>In case of dual boot the system hardware is completely dedicated to the particular OS.</p>
+<p>Simply consider your PC has a 4 GB of RAM and 1 TB of Hard disk space. In case of dual boot the the OS you are running will be able to use full available RAM improving high performance tasks experience.</p>
+<p>In Virtual Machine Software you use one OS on top of another, thus dividing the available RAM among these two OS.</p>
+<p>It is preferable to use dual boot, if your system lacks high speed hardwares and you are to be working on the selected OS for a longer duration.</p>
+<p>In case you just need to use the OS for a small work or quick tasks, VMware is recommended.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dual-boot-ubuntu-alongside-windows-10">Dual Boot Ubuntu alongside Windows 10<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1#dual-boot-ubuntu-alongside-windows-10" class="hash-link" aria-label="Direct link to Dual Boot Ubuntu alongside Windows 10" title="Direct link to Dual Boot Ubuntu alongside Windows 10">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-1--create-a-partition-for-ubuntu-os">Step 1 : Create a partition for Ubuntu OS<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1#step-1--create-a-partition-for-ubuntu-os" class="hash-link" aria-label="Direct link to Step 1 : Create a partition for Ubuntu OS" title="Direct link to Step 1 : Create a partition for Ubuntu OS">​</a></h4>
+<p>To install Ubuntu on your computer you need to set aside some free space on the hard disk. The recommended system requirements for Ubuntu 20.04 LTS are:</p>
+<ul>
+<li>2 GHz dual core processor or better</li>
+<li>4 GB RAM</li>
+<li>25 GB of free hard drive space</li>
+</ul>
+<p>In most windows PC the hard disk is majorly partitioned into</p>
+<ul>
+<li>OS (C:) drive -  Windows system and OS files are installed here</li>
+<li>D: drive, E: drive ,etc - Mainly for personal storage purpose (Optional)</li>
+</ul>
+<p>In this step we have to create such one partition to install the Ubuntu OS and to store its system files</p>
+<ul>
+<li>Login to your windows system and open Disk Management<br>
+<img decoding="async" loading="lazy" alt="Disk Management Window" src="https://your-docusaurus-site.example.com/assets/images/disk-management-window-40cf94d2164466e60287796f6138519b.png" width="399" height="311" class="img_ev3q"></li>
+<li>In above window there is a OS (C:) partition which is of 223.50 GB of disk space ( sizes will vary according to system ). Ubuntu requires minimum 25 GB of free disk space. Here I will use 50 GB of the available space for the OS installation.</li>
+<li>Right Click on the OS (C:) drive partition and select Shrink Volume.<br>
+<img decoding="async" loading="lazy" alt="Shrink Volume" src="https://your-docusaurus-site.example.com/assets/images/shrink-vomume-69a6506840af1b2ce2308def0fa40099.png" width="399" height="311" class="img_ev3q"></li>
+<li>After clicking Shrink Volume the following window will open<br>
+<img decoding="async" loading="lazy" alt="Shrink C" src="https://your-docusaurus-site.example.com/assets/images/shrink-c-ef0c4578fe2fbdb91a11c31abb175ddc.png" width="400" height="311" class="img_ev3q"></li>
+<li>In the input for column Enter the amount of space to shrink in MB enter 50000 and then click on Shrink button.</li>
+<li>Once done you will be able to see a Unallocated 50 GB partition which we will be using to install Ubuntu.<br>
+<img decoding="async" loading="lazy" alt="Unallocated Partition" src="https://your-docusaurus-site.example.com/assets/images/unallocated-partition-da88171fc34b9c7ed9f309aca081d95d.png" width="400" height="311" class="img_ev3q"></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-2--creating-an-installer-media">Step 2 : Creating an Installer Media<a href="https://your-docusaurus-site.example.com/blog/dual-boot-ubuntu-p1#step-2--creating-an-installer-media" class="hash-link" aria-label="Direct link to Step 2 : Creating an Installer Media" title="Direct link to Step 2 : Creating an Installer Media">​</a></h4>
+<p>Before proceeding further make sure you have downloaded the following softwares and have the necessary hardware ( USB drive / Pendrive - minimum 8 GB )</p>
+<ol>
+<li>Ubuntu .iso Image File (<a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener noreferrer">Download</a>)</li>
+<li>SD Memory Card Formatter Software (<a href="https://www.sdcard.org/downloads/formatter/eula_windows/index.html" target="_blank" rel="noopener noreferrer">Download</a>)</li>
+<li>Balena Etcher Software (<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener noreferrer">Download</a>)</li>
+</ol>
+<p>Once you have all the necessaries, you can connect the pendrive to the windows PC.</p>
+<p><strong>A. Formatting the USB Drive</strong></p>
+<p>Launch the SDFormatter application, once you have downloaded and installed the SD formatter from given download link. The following window will open.<br>
+<img decoding="async" loading="lazy" alt="SD Formatter v4" src="https://your-docusaurus-site.example.com/assets/images/sd-formatter-34fb13986f272f577d346f9da6f4cb07.png" width="399" height="294" class="img_ev3q"></p>
+<p>Click on Option and select FORMAT TYPE as FULL (Erase) and then select OK<br>
+<img decoding="async" loading="lazy" alt="Option Setting" src="https://your-docusaurus-site.example.com/assets/images/option-setting-106e9c13dae7e60ddea8aad7187596a1.png" width="400" height="294" class="img_ev3q"></p>
+<p>Now click on Format. Once done we can proceed to the next step.😎<br>
+<img decoding="async" loading="lazy" alt="Full Format" src="https://your-docusaurus-site.example.com/assets/images/full-format-3fe75bc740e21cf0d57b94e1261e65d3.png" width="399" height="294" class="img_ev3q"></p>
+<p><strong>B. Creating the installer media</strong></p>
+<p>Launch BalenaEtcher and you will see the following window opens<br>
+<img decoding="async" loading="lazy" alt="BalenaEtcher Window" src="https://your-docusaurus-site.example.com/assets/images/balenaetcher-window-cbe22ed63e95ce8c4b30765ed7ce74f0.png" width="400" height="237" class="img_ev3q"></p>
+<p>Click on Select image and browse to the location where you have saved the Ubuntu .iso image file.<br>
+<img decoding="async" loading="lazy" alt="Select the image file" src="https://your-docusaurus-site.example.com/assets/images/select-image-5a430395de526a9ccbfd3c6751dfadc3.png" width="400" height="237" class="img_ev3q"></p>
+<p>Select the .iso file and click Open.</p>
+<p>You should now select the USB device (if its not already selected) on which you need to write the OS.<br>
+<img decoding="async" loading="lazy" alt="Flash the OS" src="https://your-docusaurus-site.example.com/assets/images/flash-image-28f25560ce4a39e25833369485be5263.png" width="400" height="237" class="img_ev3q"></p>
+<p>Now click on Flash! and wait for the process to complete.<br>
+<img decoding="async" loading="lazy" alt="Flash Complete" src="https://your-docusaurus-site.example.com/assets/images/flash-complete-55f2272879df5c9ad44d3213c4b714e6.png" width="400" height="238" class="img_ev3q"></p>
+<p>Your installer media is ready!</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Linux" term="Linux"/>
+        <category label="Ubuntu" term="Ubuntu"/>
+        <category label="Windows 10" term="Windows 10"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu (Linux) - My OS for programming]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/ubuntu</id>
+        <link href="https://your-docusaurus-site.example.com/blog/ubuntu"/>
+        <updated>2020-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What is Ubuntu?]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-ubuntu">What is Ubuntu?<a href="https://your-docusaurus-site.example.com/blog/ubuntu#what-is-ubuntu" class="hash-link" aria-label="Direct link to What is Ubuntu?" title="Direct link to What is Ubuntu?">​</a></h3>
+<p><strong>Ubuntu</strong> is an open source linux based software operating system that runs from the desktop <strong>(Ubuntu Desktop)</strong>, to the cloud <strong>(Ubuntu Server)</strong>, to all your internet connected things.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-use-ubuntu">Why use Ubuntu?<a href="https://your-docusaurus-site.example.com/blog/ubuntu#why-use-ubuntu" class="hash-link" aria-label="Direct link to Why use Ubuntu?" title="Direct link to Why use Ubuntu?">​</a></h3>
+<p><strong>Ubuntu</strong> comes with everything you need to run your organisation, school, home or enterprise. All the essential applications, like an office suite, browsers, email and media apps come pre-installed and thousands more games and applications are available in the Ubuntu Software Centre.</p>
+<p>Ubuntu has always been free to download, use and share.</p>
+<p>It comes with a built-in firewall and virus protection software due to which it is one of the most secure operating systems around. And the long-term support releases give you five years of security patches and updates.</p>
+<p>Ubuntu is by far the most popular of the well known Linux distributions. Thus it has a large community providing extensive knowledge and solutions to most of the problems.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-get-ubuntu">How to get Ubuntu?<a href="https://your-docusaurus-site.example.com/blog/ubuntu#how-to-get-ubuntu" class="hash-link" aria-label="Direct link to How to get Ubuntu?" title="Direct link to How to get Ubuntu?">​</a></h3>
+<p>As mentioned earlier, Ubuntu is always free to download and the latest LTS version at the time of writing of this blog is Ubuntu 20.04.</p>
+<p>You can download the OS from the official site - <a href="https://ubuntu.com/download" target="_blank" rel="noopener noreferrer">https://ubuntu.com/download</a> and replace your current OS with it or run Ubuntu alongside it.</p>
+<p>For desktop PCs and laptops download the Ubuntu Desktop image from <a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener noreferrer">https://ubuntu.com/download/desktop</a></p>
+<p><img decoding="async" loading="lazy" alt="Download Ubuntu Desktop" src="https://your-docusaurus-site.example.com/assets/images/download-ubuntu-desktop-2e804ef1267104dec7f55c271f391cb5.png" width="1352" height="666" class="img_ev3q"></p>
+<p>Once you have downloaded the .iso image file for the OS, you can simply install the OS by replacing the old one or install it along side other OS such as Windows by using dual boot or Virtual Machine Softwares.</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Linux" term="Linux"/>
+        <category label="Ubuntu" term="Ubuntu"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Setting Up Raspberry Pi 3 - Part 2]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p2</id>
+        <link href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p2"/>
+        <updated>2018-01-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Practical setup of Raspberry Pi]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="practical-setup-of-raspberry-pi">Practical setup of Raspberry Pi<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p2#practical-setup-of-raspberry-pi" class="hash-link" aria-label="Direct link to Practical setup of Raspberry Pi" title="Direct link to Practical setup of Raspberry Pi">​</a></h3>
+<p>In the <a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1">previous part</a> we were all done with writing the OS to tour SD Card. Now its time to attach this SD Card to our Raspberry Pi 3 board.</p>
+<p>So connect the SD Card to the Board and follow these step to setup your board.</p>
+<ol>
+<li>Open the control panel<br>
+<img decoding="async" loading="lazy" alt="Control Panel" src="https://your-docusaurus-site.example.com/assets/images/control-panel-71c97b91ab3440ee56fdf14a48c611a3.png" width="640" height="359" class="img_ev3q"></li>
+<li>Click on the <code>Network and Internet | Network and Sharing Centre | Change Adapter settings</code>.<br>
+<!-- -->The following window will open.<br>
+<img decoding="async" loading="lazy" alt="Network Connections" src="https://your-docusaurus-site.example.com/assets/images/network-connections-06aaba32940ed387556219db8af8e8dd.png" width="584" height="300" class="img_ev3q"></li>
+<li>Click on <code>Ethernet</code>. The following window will open.<br>
+<img decoding="async" loading="lazy" alt="Ethernet Properties" src="https://your-docusaurus-site.example.com/assets/images/ethernet-properties-30266ec803003431dc2702a67411f2d2.png" width="312" height="400" class="img_ev3q"></li>
+<li>Double click on Internet Protocol Version 4(TCP/IPv4)<br>
+<img decoding="async" loading="lazy" alt="IP v4" src="https://your-docusaurus-site.example.com/assets/images/ipv4-891ef4cbfe5a35baa6a846bafd0adef6.png" width="358" height="400" class="img_ev3q"></li>
+<li>Click on Use the following IP address and use the following IP address: <code>169.254.211.250</code><br>
+<!-- -->Subnet mask will automatically set.<br>
+<img decoding="async" loading="lazy" alt="IP v4" src="https://your-docusaurus-site.example.com/assets/images/ipv4-2-60f6fa52814ccc8c091bcc2e08e82dd9.png" width="357" height="400" class="img_ev3q"></li>
+<li>Now click OK and close every thing.</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="connecting-the-raspberry-pi-to-pc">Connecting the Raspberry pi to PC<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p2#connecting-the-raspberry-pi-to-pc" class="hash-link" aria-label="Direct link to Connecting the Raspberry pi to PC" title="Direct link to Connecting the Raspberry pi to PC">​</a></h4>
+<p>Now just follow these steps to connect the Raspberry Pi to your PC.</p>
+<ol>
+<li>Power up the Raspberry Pi using an micro USB cable and connect it to PC (or a 5 V supply).</li>
+<li>Now connect the PC and the Raspberry pi using a LAN cable. If the connection is proper the Tx-Rx led will start to glow.</li>
+<li>Now to set up the Raspbian OS on your PC you will require two other softwares – Xming and Putty.</li>
+<li>You can get both the softwares from <a href="https://xming.en.download.it/" target="_blank" rel="noopener noreferrer">https://xming.en.download.it/</a> and <a href="https://www.putty.org/" target="_blank" rel="noopener noreferrer">https://www.putty.org/</a> respectively.</li>
+<li>Firstly Install the Xming software as usual next-next-install. Putty doesn't needs installation. It will directly run on your PC.</li>
+<li>Now double click on Xming to open it. You will find nothing opens. Don’t worry Xming is a background app and runs in background.</li>
+<li>Now open Putty.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-495d795c9de73241a602ad7c042a66ba.png" width="400" height="381" class="img_ev3q"></li>
+<li>In the <code>Sessions</code> tab specify the Host Name(or IP address) to <code>169.254.211.247</code>. Let all other settings at default.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-2-e29b0fd12c48b9be5096760401255520.png" width="400" height="385" class="img_ev3q"></li>
+<li>In the category expand the <code>SSH</code> tab and select <code>X11</code> and check <code>Enable X11 forwarding</code>.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-3-3bc98e610f3ccb398546d6bcacfc4699.png" width="400" height="380" class="img_ev3q"><br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-4-795f08244f6209f14d1387ca46a838fa.png" width="400" height="387" class="img_ev3q"></li>
+<li>Now click on <code>Open</code>. When you do so Raspbian OS will open. If this window opens means that yours OS is successfully installed.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-5-77272f2ec07b06907f7fdab55a091c84.png" width="640" height="408" class="img_ev3q"></li>
+<li>In Login as enter <code>pi</code> which is default user name and press enter.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-6-1fa2eedee5e0728b74421a9d794e8e2e.png" width="640" height="410" class="img_ev3q"></li>
+<li>In the password enter <code>raspberry</code> which is again by default. Note that the password you enter will not be visible. Now press enter.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-7-7756ba5bf8460837da1f6b86e52ba287.png" width="640" height="409" class="img_ev3q"></li>
+<li>Once the loading is done and you find the cursor, write the command <code>startlxde</code> and then press enter.<br>
+<img decoding="async" loading="lazy" alt="Putty" src="https://your-docusaurus-site.example.com/assets/images/putty-8-978e70ca36b861cab7d77902c2350489.png" width="640" height="411" class="img_ev3q"></li>
+<li>Once you press enter the following window will open.<br>
+<img decoding="async" loading="lazy" alt="Raspbian OS UI" src="https://your-docusaurus-site.example.com/assets/images/raspbian-os-ui-fc85fb498b6be7e91cf3037f355cf40f.png" width="640" height="360" class="img_ev3q"></li>
+</ol>
+<p>It is as an another OS at the top of my Windows 10. This is achieved using Xming. You can explore this OS for now till the next post on this.</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Raspberry Pi" term="Raspberry Pi"/>
+        <category label="Windows 10" term="Windows 10"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Setting Up Raspberry Pi 3 - Part 1]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1</id>
+        <link href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1"/>
+        <updated>2018-01-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Installing the Operating System]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="installing-the-operating-system">Installing the Operating System<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1#installing-the-operating-system" class="hash-link" aria-label="Direct link to Installing the Operating System" title="Direct link to Installing the Operating System">​</a></h3>
+<p>The first model of raspberry pi was launched in 2011. Since then it has became immensely popular as a low cost computer.</p>
+<p>There are many models of the Raspberry Pi from Raspberry Pi zero to Raspberry Pi 3.</p>
+<p>In this blog I will more concentrate on the latest raspberry pi model RASPBERRY PI 3, Model B which comes with 1 GB RAM.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="materials-required">Materials Required:<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1#materials-required" class="hash-link" aria-label="Direct link to Materials Required:" title="Direct link to Materials Required:">​</a></h4>
+<ol>
+<li>A Raspberry Pi 3, Model B.</li>
+<li>A minimum 8 GB SD Card. I am using a 16 GB SD Card.</li>
+<li>A micro USB cable for powering the Pi.</li>
+<li>A LAN cable.</li>
+<li>Softwares Required<!-- -->
+<ul>
+<li>SDFormatter</li>
+<li>Win32 disc Manager software</li>
+<li>Xming</li>
+<li>Putty</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="steps">Steps:<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1#steps" class="hash-link" aria-label="Direct link to Steps:" title="Direct link to Steps:">​</a></h4>
+<p>We are going to install our OS on the SD card, so definitely we will require it to be fully empty. So the first step is to format the SD card.</p>
+<p>For this purpose you can use the application SDFormatter. You can download it from <a href="https://www.sdcard.org/downloads/formatter/" target="_blank" rel="noopener noreferrer">https://www.sdcard.org/downloads/formatter/</a></p>
+<p>Once done with this install it on your PC. Just  go with the flow, Next -Next and INSTALL.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="now-follow-these-steps-to-get-your-sd-card-ready">Now follow these steps to get your SD card ready.<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1#now-follow-these-steps-to-get-your-sd-card-ready" class="hash-link" aria-label="Direct link to Now follow these steps to get your SD card ready." title="Direct link to Now follow these steps to get your SD card ready.">​</a></h4>
+<ol>
+<li>Connect the SD card to your PC.</li>
+<li>Now open the SDFormatter software. It will look as shown in the following screenshot.<br>
+<img decoding="async" loading="lazy" alt="SD Formatter" src="https://your-docusaurus-site.example.com/assets/images/sdformatter-9412eb5f751525cde333478e1755fedb.jpg" width="400" height="307" class="img_ev3q"></li>
+<li>Make sure your SD Card drive name is selected. If not you can do this now.</li>
+<li>Now click on option. A pop up window will open as seen in the next screenshot.<br>
+<img decoding="async" loading="lazy" alt="SD Formatter" src="https://your-docusaurus-site.example.com/assets/images/sdformatter-2-798f7d13e9360f2931153846800486d6.jpg" width="400" height="309" class="img_ev3q"></li>
+<li>Select format type as FULL(erase) and format size adjustment as OFF.</li>
+<li>Now click OK and select format. This will prepare our SD Card for OS installation</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="now-its-time-to-write-the-os-to-our-sd-card">Now its time to write the OS to our SD Card.<a href="https://your-docusaurus-site.example.com/blog/setting-raspberry-pi-software-p1#now-its-time-to-write-the-os-to-our-sd-card" class="hash-link" aria-label="Direct link to Now its time to write the OS to our SD Card." title="Direct link to Now its time to write the OS to our SD Card.">​</a></h4>
+<p>Now you will require the <strong>Disc Image File Raspbian-jessie</strong> which you can get from <a href="https://downloads.raspberrypi.org/raspbian/images/" target="_blank" rel="noopener noreferrer">https://downloads.raspberrypi.org/raspbian/images/</a></p>
+<p>Once you have downloaded and extracted the .img file, place it in a proper folder for now so that it is easy to browse to it.<br>
+<img decoding="async" loading="lazy" alt="File Explorer" src="https://your-docusaurus-site.example.com/assets/images/file-explorer-11cd3c13343f3648d2669afc16416268.jpg" width="640" height="186" class="img_ev3q"></p>
+<p>Now you are ready to install this image file onto your SD Card. For this you will require the <strong>win32 disc Manager software</strong>. You can download from <a href="https://win32diskimager.org/" target="_blank" rel="noopener noreferrer">https://win32diskimager.org/</a>.</p>
+<p>Once installed open the software. It will look as in following screenshot<br>
+<img decoding="async" loading="lazy" alt="Disk Imager" src="https://your-docusaurus-site.example.com/assets/images/disk-imager-59e959a6ab7d05953a0160c86d422930.jpg" width="400" height="203" class="img_ev3q"></p>
+<p>From the Browse options go to the location of the Raspbian image file. In my case it is F:\Raspberry Pi OS.<br>
+<img decoding="async" loading="lazy" alt="Raspbian Image" src="https://your-docusaurus-site.example.com/assets/images/raspbian-image-568e213a9e1a293bf670a257eaba1304.png" width="640" height="438" class="img_ev3q"></p>
+<p>Once you select the .img file click open.<br>
+<img decoding="async" loading="lazy" alt="Disk Imager 2" src="https://your-docusaurus-site.example.com/assets/images/disk-imager-2-8301810f7d385d2834b381f04cc9f0b4.png" width="400" height="213" class="img_ev3q"></p>
+<p>Now click on Write and  this will start the writing the OS on the SD Card. Once it is done click on OK.</p>
+<p>Now browse to the SD Card from your PC's File Browser and open it.<br>
+<img decoding="async" loading="lazy" alt="File Explorer" src="https://your-docusaurus-site.example.com/assets/images/file-explorer-2-372e6e54e38d576c7a25cacad59cfb80.png" width="640" height="320" class="img_ev3q"></p>
+<p>Now find the file CMDline.txt file. And open it in Notepad.<br>
+<img decoding="async" loading="lazy" alt="Notepad" src="https://your-docusaurus-site.example.com/assets/images/notepad-716010417538c36dd92b9317fdfa504e.png" width="640" height="233" class="img_ev3q"></p>
+<p>In this file find the word <code>rootwait</code> and replace it by <code>rootwait ip=169.254.211.247</code>.<br>
+<img decoding="async" loading="lazy" alt="Notepad 2" src="https://your-docusaurus-site.example.com/assets/images/notepad-2-9e21adf4d462a40b816d7c41cbdcc807.png" width="640" height="231" class="img_ev3q"></p>
+<p>Now connect the SD Card to Raspberry Pi.</p>
+<p>In the next post we will see how to install the setup the Raspberry Pi with our PC.</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Raspberry Pi" term="Raspberry Pi"/>
+        <category label="Windows 10" term="Windows 10"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Setting Up Arduino Software for the First time]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/setting-arduino-software</id>
+        <link href="https://your-docusaurus-site.example.com/blog/setting-arduino-software"/>
+        <updated>2018-01-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Setup for Arduino IDE:]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setup-for-arduino-ide">Setup for Arduino IDE:<a href="https://your-docusaurus-site.example.com/blog/setting-arduino-software#setup-for-arduino-ide" class="hash-link" aria-label="Direct link to Setup for Arduino IDE:" title="Direct link to Setup for Arduino IDE:">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="installing-the-software">Installing the Software:<a href="https://your-docusaurus-site.example.com/blog/setting-arduino-software#installing-the-software" class="hash-link" aria-label="Direct link to Installing the Software:" title="Direct link to Installing the Software:">​</a></h4>
+<p>You can download the Arduino IDE from the official site of Arduino <a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener noreferrer">https://www.arduino.cc/en/Main/Software</a>. Download the latest version. At the time of writing this post the latest version was version 1.8.5.</p>
+<p>I have downloaded the Windows Zip file for non-admin install.<br>
+<img decoding="async" loading="lazy" alt="Download Arduino" src="https://your-docusaurus-site.example.com/assets/images/download-arduino-6def6fc3ccd24d65fdd3b5091623c24f.jpg" width="640" height="295" class="img_ev3q"></p>
+<p>Once downloaded, extract the file and you will find the Arduino software in there, no need of any installing procedures.<br>
+<img decoding="async" loading="lazy" alt="File Explorer" src="https://your-docusaurus-site.example.com/assets/images/file-explorer-a0b88ac585a62ab42f81fb8bf6df3b03.jpg" width="640" height="457" class="img_ev3q"></p>
+<p>If you are connecting your Arduino Board for the first time you will require to install the necessary drivers to make the board compatible .</p>
+<p>The drivers are available in the drivers folder in the extracted folder.</p>
+<p>Just open it and find the <strong>Arduino.inf</strong> file in it. Copy the path of the drivers folder.<br>
+<img decoding="async" loading="lazy" alt="Drivers" src="https://your-docusaurus-site.example.com/assets/images/drivers-3ddbe4ebc5890df73c013a2842e62632.jpg" width="640" height="460" class="img_ev3q"></p>
+<p>Now open the Device Manager<br>
+<img decoding="async" loading="lazy" alt="Device Manager" src="https://your-docusaurus-site.example.com/assets/images/device-manager-20f9a07bece904c8e231ca23af037bc4.jpg" width="640" height="468" class="img_ev3q"></p>
+<p>In the device manager, when you connect the Arduino you will find your device name in the Ports(COM &amp; LPT). For eg. Arduino UNO or Arduino MEGA etc. If you cant find your device under Ports(COM &amp; LPT) look under Other Devices.</p>
+<p>Once you have found your device, Right click on the device and select Update Driver Software.<br>
+<img decoding="async" loading="lazy" alt="Device Manager" src="https://your-docusaurus-site.example.com/assets/images/device-manager-2-bf3e36cc2e4450de384297dee23d6582.jpg" width="640" height="470" class="img_ev3q"></p>
+<p>The following window will open<br>
+<img decoding="async" loading="lazy" alt="Update Driver" src="https://your-docusaurus-site.example.com/assets/images/update-driver-9c3eef07856b016fa8bd7dc21605d8b3.jpg" width="610" height="456" class="img_ev3q"></p>
+<p>Select Browse my computer for driver software and browse to the drivers folder or paste the address of the driver software and click Next.<br>
+<img decoding="async" loading="lazy" alt="Update Driver 2" src="https://your-docusaurus-site.example.com/assets/images/update-driver-2-ed171adf8be985b002db80f31458fa7f.jpg" width="614" height="456" class="img_ev3q"></p>
+<p>After this the windows will install the necessary driver and you are ready to go. Connect your device and simply plug and play.</p>]]></content>
+        <author>
+            <name>Sahil Phondekar</name>
+            <uri>https://github.com/sahil-phondekar</uri>
+        </author>
+        <category label="Arduino" term="Arduino"/>
+        <category label="Windows 10" term="Windows 10"/>
+    </entry>
+</feed>
