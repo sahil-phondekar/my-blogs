@@ -1,0 +1,29 @@
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+linux:
+  label: Linux
+  permalink: /linux
+  description: Linux Operating System
+
+ubuntu:
+  label: Ubuntu
+  permalink: /ubuntu
+  description: Ubuntu Operating System
+
+windows10:
+  label: Windows 10
+  permalink: /windows10
+  description: Windows 10 Operating System
+
+arduino:
+  label: Arduino
+  permalink: /arduino
+  description: Arduino IDE
+
+raspberrypi:
+  label: Raspberry Pi
+  permalink: /raspberrypi
+  description: Raspberry Pi
