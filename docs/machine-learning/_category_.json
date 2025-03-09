@@ -1,0 +1,8 @@
+{
+  "label": "Machine Learning",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Machine learning concepts."
+  }
+}
