@@ -27,3 +27,23 @@ raspberrypi:
   label: Raspberry Pi
   permalink: /raspberrypi
   description: Raspberry Pi
+
+react:
+  label: React
+  permalink: /react
+  description: React
+
+stripe:
+  label: Stripe
+  permalink: /stripe
+  description: Stripe
+
+springboot:
+  label: Spring Boot
+  permalink: /springboot
+  description: Spring Boot
+
+java: 
+  label: Java
+  permalink: /java
+  description: Java
