@@ -47,3 +47,23 @@ java:
   label: Java
   permalink: /java
   description: Java
+
+sso: 
+  label: SSO
+  permalink: /sso
+  description: Single Sign-On (SSO)
+
+saml:
+  label: SAML
+  permalink: /saml
+  description: Security Assertion Markup Language (SAML)
+
+nodejs: 
+  label: Node JS
+  permalink: /node-js
+  description: Node JS
+
+expressjs:
+  label: Express JS
+  permalink: /express
+  description: Express JS
