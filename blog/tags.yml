@@ -67,3 +67,23 @@ expressjs:
   label: Express JS
   permalink: /express
   description: Express JS
+
+jwt-authentication:
+  label: JWT Authentication
+  permalink: /jwt-authentication
+  description: JSON Web Token (JWT) Authentication in Spring Boot
+
+spring-security:
+  label: Spring Security
+  permalink: /spring-security
+  description: Secure your applications using Spring Security
+
+rest-api-security:
+  label: REST API Security
+  permalink: /rest-api-security
+  description: Best practices for securing REST APIs
+
+swagger:
+  label: Swagger
+  permalink: /swagger
+  description: API documentation with Swagger UI
