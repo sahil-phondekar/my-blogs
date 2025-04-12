@@ -87,3 +87,33 @@ swagger:
   label: Swagger
   permalink: /swagger
   description: API documentation with Swagger UI
+
+tailwindcss:
+  label: TailwindCSS
+  permalink: /tailwindcss
+  description: Utility-first CSS framework for rapidly building modern, responsive user interfaces.
+
+javascript:
+  label: JavaScript
+  permalink: /javascript
+  description: The core programming language of the web, used to build dynamic and interactive experiences.
+
+npm:
+  label: NPM
+  permalink: /npm
+  description: The package manager for JavaScript, used to share and install open-source libraries and tools.
+
+babel:
+  label: Babel
+  permalink: /babel
+  description: A JavaScript compiler that lets you use the latest features and syntax in older environments.
+
+webpack:
+  label: Webpack
+  permalink: /webpack
+  description: A powerful module bundler for JavaScript applications, used to bundle and optimize frontend code.
+
+vite:
+  label: Vite
+  permalink: /vite
+  description: Vite
